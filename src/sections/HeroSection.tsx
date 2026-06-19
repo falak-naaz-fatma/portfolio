@@ -245,7 +245,7 @@ function SocialStrip() {
 export function HeroSection() {
   return (
     <section id="hero" className="flex min-h-screen w-full flex-col md:flex-row" aria-labelledby="hero-title">
-      <div className="flex w-full flex-col justify-center bg-[var(--bg)] px-8 pb-16 pt-28 md:w-1/2 md:pl-20 md:pr-12 md:pb-0 md:pt-0">
+      <div className="flex w-full flex-col justify-center bg-[var(--bg)] pl-16 pr-8 pb-16 pt-28 md:w-1/2 md:pl-32 md:pr-12 md:pb-0 md:pt-0">
         <p
           id="hero-title"
           className="mb-4 font-[var(--font-dm-sans)] text-[2.2rem] font-bold text-[var(--text)] md:text-[2.8rem]"
@@ -258,12 +258,14 @@ export function HeroSection() {
         <p className="mt-6 max-w-[420px] text-[1rem] leading-relaxed text-[var(--text-muted)]">
           Front-end focused Full Stack Developer with 1.5 years building production apps with React, Next.js, and TypeScript.
         </p>
-        <div className="mt-8 flex flex-wrap gap-4">
+        <div className="mt-8 flex flex-wrap gap-3">
           <a
-            href="#projects"
-            className="inline-flex min-h-[44px] items-center justify-center rounded-sm bg-[var(--text)] px-6 text-[0.9rem] font-bold text-[var(--text-dark)] transition-colors hover:opacity-90"
+            href="/resume.pdf"
+            download="Falak_Naaz_Fatma_Resume.pdf"
+            className="inline-flex min-h-[44px] items-center justify-center rounded-sm px-6 text-[0.9rem] font-bold transition-colors hover:opacity-90"
+            style={{ backgroundColor: "#ffffff", color: "#0a0a0a" }}
           >
-            View Projects
+            Download Resume ↓
           </a>
           <a
             href="#contact"

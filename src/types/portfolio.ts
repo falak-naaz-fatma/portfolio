@@ -12,6 +12,7 @@ export type Project = {
   stack: string[];
   achievements: string[];
   featured?: boolean;
+  badgeLabel?: string;
 };
 
 export type SkillGroup = {
