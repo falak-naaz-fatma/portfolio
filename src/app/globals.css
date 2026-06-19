@@ -78,6 +78,42 @@ a {
   animation: blink 1s step-end infinite;
 }
 
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.marquee-left {
+  animation: marquee-left 30s linear infinite;
+}
+
+.marquee-right {
+  animation: marquee-right 30s linear infinite;
+}
+
+.marquee-wrapper:hover .marquee-left,
+.marquee-wrapper:hover .marquee-right {
+  animation-play-state: paused;
+}
+
+.skill-marquee-mask {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
 /* Scroll reveal stagger */
 .section-padding {
   padding: 96px 0;

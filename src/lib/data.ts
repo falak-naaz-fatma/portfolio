@@ -19,10 +19,10 @@ export const experience: Experience = {
   dates: "Sept 2024 – Feb 2026",
   location: "Remote",
   bullets: [
-    "Built full-stack Next.js app with SEO-optimized, high-performance components",
-    "Implemented OAuth 2.0 for secure integration with external platforms",
-    "Resolved Safari-specific rendering bug achieving cross-browser consistency",
-    "Led onboarding for new team members on backend architecture and workflow",
+    "Built and maintained a full-stack Next.js application — implementing SSR, dynamic routing, and SEO optimization through metadata configuration.",
+    "Engineered OAuth 2.0 integrations across multiple platforms — handling auth flows, token lifecycle management, and cross-platform data sync.",
+    "Led full UI migration from PrimeReact to shadcn/ui + Tailwind CSS — modernizing the design system and reducing bundle size.",
+    "Built reusable Context Providers managing app-wide auth state, and led onboarding for new team members on backend architecture and workflows.",
   ],
 };
 
@@ -31,34 +31,54 @@ export const projects: Project[] = [
     title: "Productiviti",
     href: "https://productiviti.io",
     description:
-      "A featured product platform shaped around secure integrations, shared interface systems, and a polished migration to a modern component stack.",
-    fullDescription:
-      "A featured product platform focused on secure OAuth integrations, shared auth state management, and a complete migration to a modern UI component ecosystem.",
+      "A productivity platform integrating multiple external services with real-time sync, unified auth, and a fully custom design system.",
     stack: ["Next.js", "React", "TypeScript", "Tailwind", "shadcn/ui", "OAuth 2.0"],
     achievements: [
-      "OAuth 2.0 integrations with full token lifecycle and cross-platform sync",
-      "Global Context Providers managing auth state and real-time platform status",
-      "Reusable component library standardizing design patterns",
-      "Full UI migration from PrimeReact to shadcn/ui + Tailwind",
+      "Engineered OAuth 2.0 integrations handling token lifecycle and cross-platform data sync across multiple services",
+      "Built global Context Providers managing app-wide auth state and real-time platform connection statuses",
+      "Led full UI migration from PrimeReact/PrimeFlex to shadcn/ui + Tailwind CSS, modernizing the design system",
     ],
     featured: true,
+    badgeLabel: "Company Project",
+  },
+  {
+    title: "Spendly",
+    href: "https://finance-dashboard-blush-rho.vercel.app/",
+    description:
+      "A personal finance dashboard for tracking income, expenses, and spending patterns — built independently with full authentication, transaction management, and analytics.",
+    stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "MongoDB", "NextAuth.js", "Recharts", "Framer Motion"],
+    achievements: [
+      "Built secure authentication with email/password (encrypted) and Google OAuth via NextAuth.js, including a password reset flow",
+      "Designed protected dashboard, transactions, and analytics routes with CRUD operations backed by MongoDB",
+      "Built data visualizations using Recharts — bar charts, pie charts, balance trends, and category analytics",
+    ],
+    featured: true,
+    badgeLabel: "Personal Project",
   },
   {
     title: "HireTalentt",
     href: "https://hiretalentt.com",
-    description: "SSR for SEO, OAuth 2.0 auth, REST APIs with MongoDB CRUD.",
+    description:
+      "A full-stack hiring platform with server-side rendering, secure authentication, and real-time job management.",
     stack: ["React", "Next.js", "Tailwind", "MongoDB", "OAuth 2.0"],
-    achievements: ["SSR for SEO", "OAuth 2.0 auth", "REST APIs with MongoDB CRUD"],
+    achievements: [
+      "Implemented SSR with Next.js for SEO optimization and metadata config",
+      "Built OAuth 2.0 authentication flow for secure platform integrations",
+      "Developed REST APIs and integrated MongoDB for real-time CRUD operations",
+    ],
+    badgeLabel: "Company Project",
   },
   {
     title: "Job Portal Web App",
-    description: "Role-based flows (admin/recruiter/user), filters, search, pagination.",
+    description:
+      "A role-based job portal with separate flows for admins, recruiters, and job seekers.",
     stack: ["React", "Tailwind"],
     achievements: [
-      "Role-based flows for admin, recruiter, and user",
-      "Job filters, search, and pagination",
-      "Secure authentication",
+      "Built admin, recruiter, and user flows with responsive UI",
+      "Integrated role-based authentication and secure login/registration",
+      "Implemented job filters, search, and pagination for improved UX",
     ],
+    badgeLabel: "Client Project",
   },
 ];
 
