@@ -13,7 +13,7 @@ export function Projects() {
     const gridProjects = projects.filter((p) => !p.featured);
 
     return (
-        <AnimatedSection id="projects" labelledBy="projects-title" className="section-padding !pb-0">
+        <AnimatedSection id="projects" labelledBy="projects-title" className="section-padding pb-0!">
             <motion.div variants={revealItem} className="mb-10">
                 <SectionLabel>Projects</SectionLabel>
                 <h2 id="projects-title" className="mt-3 font-heading text-[2.5rem] font-bold text-text">
