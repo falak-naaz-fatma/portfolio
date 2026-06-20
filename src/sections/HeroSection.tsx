@@ -260,7 +260,7 @@ export function HeroSection() {
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <a
-            href="/resume.pdf"
+            href="/FalakResume.pdf"
             download="Falak_Naaz_Fatma_Resume.pdf"
             className="inline-flex min-h-[44px] items-center justify-center rounded-sm px-6 text-[0.9rem] font-bold transition-colors hover:opacity-90"
             style={{ backgroundColor: "#ffffff", color: "#0a0a0a" }}
