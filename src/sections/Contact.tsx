@@ -109,22 +109,24 @@ export function Contact() {
     const { isInView, prefersReducedMotion } = useInView(ref);
 
     return (
-        <section ref={ref} id="contact" className="mx-auto max-w-[1100px] px-6" style={{ paddingTop: "96px", paddingBottom: "96px" }}>
-            <motion.h2
-                initial={prefersReducedMotion ? false : { opacity: 0, y: 28 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
-                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                className="mb-4 text-[3rem] font-bold text-text"
-                style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
-            >
-                Contact Me
-            </motion.h2>
+        <section ref={ref} id="contact" className="w-full mx-auto max-w-[1100px]" style={{ paddingTop: "64px", paddingBottom: "64px" }}>
+            <div className="px-6 sm:px-10 md:px-16 lg:px-20">
+                <motion.h2
+                    initial={prefersReducedMotion ? false : { opacity: 0, y: 28 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
+                    transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                    className="mb-4 text-[3rem] font-bold text-text"
+                    style={{ fontFamily: "var(--font-dm-sans), sans-serif" }}
+                >
+                    Contact Me
+                </motion.h2>
 
-            <div className="mb-12 h-px w-full bg-border" />
+                <div className="mb-12 h-px w-full bg-border" />
 
-            <div className="grid gap-12 md:grid-cols-[40%_60%]">
-                <ContactInfoColumn />
-                <ContactForm />
+                <div className="grid gap-12 md:grid-cols-[40%_60%]">
+                    <ContactInfoColumn />
+                    <ContactForm />
+                </div>
             </div>
         </section>
     );

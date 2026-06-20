@@ -15,14 +15,14 @@ const paragraphs = [
 export function About() {
   return (
     <AnimatedSection id="about" labelledBy="about-title" className="section-padding !pb-0">
-      <motion.div variants={revealItem} className="mb-10">
+      <motion.div variants={revealItem} className="mb-10 px-6 sm:px-10 md:px-16 lg:px-20">
         <SectionLabel>ABOUT</SectionLabel>
         <h2 id="about-title" className="mt-3 font-heading text-[2.5rem] font-bold text-text">
           A little about me
         </h2>
       </motion.div>
 
-      <motion.div variants={revealItem}>
+      <motion.div variants={revealItem} className="px-6 sm:px-10 md:px-16 lg:px-20">
         {paragraphs.map((paragraph) => (
           <p key={paragraph} className="mb-6 text-[1rem] leading-[1.8] text-text-muted last:mb-0">
             {paragraph}

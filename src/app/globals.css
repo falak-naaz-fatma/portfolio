@@ -116,11 +116,13 @@ a {
 
 /* Scroll reveal stagger */
 .section-padding {
-  padding: 96px 0;
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 
 @media (max-width: 768px) {
   .section-padding {
-    padding: 64px 0;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 }

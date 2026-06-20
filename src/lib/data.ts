@@ -1,7 +1,9 @@
 import type { ContactLink, Experience, NavItem, Project, SkillGroup } from "@/types/portfolio";
 
 export const navItems: NavItem[] = [
-  { label: "Work", href: "#experience", id: "experience" },
+  { label: "About", href: "#about", id: "about" },
+  { label: "Experience", href: "#experience", id: "experience" },
+  { label: "Work", href: "#projects", id: "projects" },
   { label: "Skills", href: "#skills", id: "skills" },
   { label: "Contact", href: "#contact", id: "contact" },
 ];
