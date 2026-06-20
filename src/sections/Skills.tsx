@@ -102,8 +102,8 @@ function MarqueeRow({ skills, direction }: { skills: Skill[]; direction: "left" 
 
 export function Skills() {
   return (
-    <AnimatedSection id="skills" labelledBy="skills-title" className="section-padding pb-0!">
-      <motion.div variants={revealItem}>
+    <AnimatedSection id="skills" labelledBy="skills-title" className="section-padding !pb-0">
+      <motion.div variants={revealItem} className="px-6 sm:px-10 md:px-16 lg:px-20">
         <SectionLabel>SKILLS</SectionLabel>
         <h2 id="skills-title" className="mt-3 font-heading text-[2.5rem] font-bold text-text">
           What I work with
@@ -114,8 +114,10 @@ export function Skills() {
       </motion.div>
 
       <motion.div variants={revealItem} className="skill-marquee-mask grid gap-4">
-        <MarqueeRow skills={rowOne} direction="left" />
-        <MarqueeRow skills={rowTwo} direction="right" />
+        <div className="-mx-6 sm:-mx-10 md:-mx-16 lg:-mx-20">
+          <MarqueeRow skills={rowOne} direction="left" />
+          <MarqueeRow skills={rowTwo} direction="right" />
+        </div>
       </motion.div>
     </AnimatedSection>
   );

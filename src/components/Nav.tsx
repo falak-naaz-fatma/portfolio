@@ -19,16 +19,16 @@ export function Nav({ items }: NavProps) {
   return (
     <header
       className={cx(
-        "fixed left-0 top-0 z-50 w-full h-16 transition-all duration-300",
+        "fixed left-0 top-0 z-50 w-full h-16 border-b transition-all duration-300",
         isScrolled
-          ? "border-b border-border bg-bg/80 backdrop-blur-xl"
-          : "bg-transparent",
+          ? "border-border bg-bg/80 backdrop-blur-md"
+          : "border-transparent bg-transparent",
       )}
     >
-      <nav className="mx-auto flex h-full max-w-[1100px] items-center justify-between px-6" aria-label="Primary navigation">
+      <nav className="flex h-full w-full items-center justify-between px-6 md:px-12 lg:px-20" aria-label="Primary navigation">
         <a
           href="#main"
-          className="font-heading text-[1.1rem] font-bold tracking-[0.08em] text-text"
+          className="font-heading text-[1.1rem] font-bold tracking-[0.08em] text-text no-underline outline-none"
           aria-label="Falak Naaz Fatma home"
         >
           FALAK

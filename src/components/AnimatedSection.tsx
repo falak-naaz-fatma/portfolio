@@ -24,7 +24,7 @@ export function AnimatedSection({ id, children, className, labelledBy }: Animate
       ref={ref}
       id={id}
       aria-labelledby={labelledBy}
-      className={cx("mx-auto max-w-[1100px] px-6", className)}
+      className={cx("w-full mx-auto max-w-[1100px]", className)}
       initial={prefersReducedMotion ? false : "hidden"}
       animate={isInView ? "visible" : "hidden"}
       variants={revealContainer}

@@ -12,17 +12,30 @@ export function useScrollSpy({ sectionIds, offset = 128 }: UseScrollSpyOptions) 
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+
     const updateState = () => {
-      setIsScrolled(window.scrollY > 80);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled((prev) => {
+            const y = window.scrollY;
+            if (prev) return y > 40;
+            return y > 80;
+          });
 
-      const activeSection = sectionIds
-        .map((id) => document.getElementById(id))
-        .filter((el): el is HTMLElement => el !== null)
-        .reverse()
-        .find((section) => section.getBoundingClientRect().top <= offset);
+          const activeSection = sectionIds
+            .map((id) => document.getElementById(id))
+            .filter((el): el is HTMLElement => el !== null)
+            .reverse()
+            .find((section) => section.getBoundingClientRect().top <= offset);
 
-      if (activeSection) {
-        setActiveId(activeSection.id);
+          if (activeSection) {
+            setActiveId(activeSection.id);
+          }
+
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
