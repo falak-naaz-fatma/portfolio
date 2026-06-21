@@ -101,7 +101,6 @@ export const skillGroups: SkillGroup[] = [
 
 export const contactInfo = {
   email: "falaknaazfatma26@gmail.com",
-  phone: "+91 9754345274",
   linkedin: "linkedin.com/in/falak-naaz-fatma",
   github: "github.com/falak-naaz-fatma",
 };

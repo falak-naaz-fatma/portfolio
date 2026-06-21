@@ -11,10 +11,35 @@ function ContactForm() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+    const [statusMessage, setStatusMessage] = useState("");
 
-    const handleSubmit = (e: FormEvent) => {
+    const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
-        window.location.href = `mailto:${contactInfo.email}?subject=Portfolio Inquiry from ${name || "Visitor"}&body=${encodeURIComponent(message || `Hi Falak,\n\nI viewed your portfolio and would like to connect.\n\n- ${name || "Visitor"} (${email || "no email"})`)}`;
+        setStatus("loading");
+        setStatusMessage("");
+
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, email, message }),
+            });
+
+            if (!res.ok) {
+                const data = await res.json();
+                throw new Error(data.error || "Something went wrong.");
+            }
+
+            setStatus("success");
+            setStatusMessage("Thanks! Your message has been sent.");
+            setName("");
+            setEmail("");
+            setMessage("");
+        } catch (err) {
+            setStatus("error");
+            setStatusMessage(err instanceof Error ? err.message : "Failed to send message.");
+        }
     };
 
     const inputClass = "w-full rounded-sm border border-border bg-bg-card px-5 py-3 text-[0.95rem] text-text outline-none transition-colors placeholder:text-text-muted focus:border-accent";
@@ -28,23 +53,31 @@ function ContactForm() {
             <textarea placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)} className={`mt-4 h-40 w-full resize-y ${inputClass}`} />
             <button
                 type="submit"
-                className="mt-4 inline-flex items-center justify-center rounded-sm px-8 py-3 text-[0.95rem] font-semibold transition-colors"
+                disabled={status === "loading"}
+                className="mt-4 inline-flex items-center justify-center rounded-sm px-8 py-3 text-[0.95rem] font-semibold transition-colors disabled:opacity-60"
                 style={{
                     backgroundColor: "var(--text)",
                     color: "var(--bg)",
                     fontFamily: "var(--font-dm-sans), sans-serif",
                 }}
                 onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = "var(--accent)";
-                    e.currentTarget.style.color = "var(--text)";
+                    if (status !== "loading") {
+                        e.currentTarget.style.backgroundColor = "var(--accent)";
+                        e.currentTarget.style.color = "var(--text)";
+                    }
                 }}
                 onMouseLeave={(e) => {
                     e.currentTarget.style.backgroundColor = "var(--text)";
                     e.currentTarget.style.color = "var(--bg)";
                 }}
             >
-                Send Message
+                {status === "loading" ? "Sending..." : "Send Message"}
             </button>
+            {statusMessage && (
+                <p className={`mt-3 text-[0.9rem] ${status === "success" ? "text-[#4ADE80]" : "text-[#ff5f57]"}`}>
+                    {statusMessage}
+                </p>
+            )}
         </form>
     );
 }
@@ -76,11 +109,6 @@ function ContactInfoColumn() {
                 <a href={`mailto:${contactInfo.email}`} className="text-text-muted transition-colors hover:text-text">
                     {contactInfo.email}
                 </a>
-            </motion.div>
-
-            <motion.div variants={revealItem} className="mt-4">
-                <span className="font-bold text-text">Phone: </span>
-                <span className="text-text-muted">{contactInfo.phone}</span>
             </motion.div>
 
             <motion.div variants={revealItem} className="mt-4">
