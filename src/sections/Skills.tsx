@@ -103,7 +103,7 @@ function MarqueeRow({ skills, direction }: { skills: Skill[]; direction: "left" 
 export function Skills() {
   return (
     <AnimatedSection id="skills" labelledBy="skills-title" className="section-padding !pb-0">
-      <motion.div variants={revealItem} className="px-6 sm:px-10 md:px-16 lg:px-20">
+      <motion.div variants={revealItem} className="px-6 sm:px-10 md:px-16 lg:px-20 xl:px-0">
         <SectionLabel>SKILLS</SectionLabel>
         <h2 id="skills-title" className="mt-3 font-heading text-[2.5rem] font-bold text-text">
           What I work with
