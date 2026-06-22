@@ -14,14 +14,14 @@ export function Projects() {
 
     return (
         <AnimatedSection id="projects" labelledBy="projects-title" className="section-padding !pb-0">
-            <motion.div variants={revealItem} className="mb-10 px-6 sm:px-10 md:px-16 lg:px-20">
+            <motion.div variants={revealItem} className="mb-10 px-6 sm:px-10 md:px-16 lg:px-20 xl:px-0">
                 <SectionLabel>Projects</SectionLabel>
                 <h2 id="projects-title" className="mt-3 font-heading text-[2.5rem] font-bold text-text">
                     Things I've shipped
                 </h2>
             </motion.div>
 
-            <div className="px-6 sm:px-10 md:px-16 lg:px-20">
+            <div className="px-6 sm:px-10 md:px-16 lg:px-20 xl:px-0">
                 <motion.div variants={revealItem} className="grid gap-6 lg:grid-cols-2">
                     {featuredProjects.map((project) => (
                         <ProjectCard key={project.title} project={project} />
@@ -29,7 +29,7 @@ export function Projects() {
                 </motion.div>
             </div>
 
-            <div className="px-6 sm:px-10 md:px-16 lg:px-20">
+            <div className="px-6 sm:px-10 md:px-16 lg:px-20 xl:px-0">
                 <motion.div variants={revealItem} className="mt-6 grid gap-6 lg:grid-cols-2">
                     {gridProjects.map((project) => (
                         <ProjectCard key={project.title} project={project} />

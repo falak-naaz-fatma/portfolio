@@ -138,7 +138,7 @@ export function Contact() {
 
     return (
         <section ref={ref} id="contact" className="w-full mx-auto max-w-[1100px]" style={{ paddingTop: "64px", paddingBottom: "64px" }}>
-            <div className="px-6 sm:px-10 md:px-16 lg:px-20">
+            <div className="px-6 sm:px-10 md:px-16 lg:px-20 xl:px-0">
                 <motion.h2
                     initial={prefersReducedMotion ? false : { opacity: 0, y: 28 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}

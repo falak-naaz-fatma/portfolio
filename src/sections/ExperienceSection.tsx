@@ -12,14 +12,14 @@ export function Experience() {
 
   return (
     <AnimatedSection id="experience" labelledBy="experience-title" className="section-padding !pb-0">
-      <motion.div variants={revealItem} className="mb-10 px-6 sm:px-10 md:px-16 lg:px-20">
+      <motion.div variants={revealItem} className="mb-10 px-6 sm:px-10 md:px-16 lg:px-20 xl:px-0">
         <SectionLabel>Experience</SectionLabel>
         <h2 id="experience-title" className="mt-3 font-heading text-[2.5rem] font-bold text-text">
           Where I've worked
         </h2>
       </motion.div>
 
-      <motion.div variants={revealItem} className="px-6 sm:px-10 md:px-16 lg:px-20">
+      <motion.div variants={revealItem} className="px-6 sm:px-10 md:px-16 lg:px-20 xl:px-0">
         <motion.article
           variants={revealItem}
           whileHover={prefersReducedMotion ? undefined : { y: -2 }}
