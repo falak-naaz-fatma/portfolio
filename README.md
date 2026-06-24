@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Hi, I'm Falak Naaz Fatma 👋
 
-## Getting Started
+Front-end focused Full Stack Developer | React, Next.js & TypeScript | Building clean, modern web experiences
 
-First, run the development server:
+👩‍💻 About Me
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I'm a Full Stack Developer with a strong front-end focus, passionate about building scalable, accessible, and visually polished web applications. I enjoy turning ideas into clean, responsive interfaces backed by solid, maintainable code.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🎯 Focused on modern web apps, dashboards & design systems
+⚙️ Tech stack: React, Next.js, TypeScript, Tailwind CSS, shadcn/ui, MongoDB
+🌐 Portfolio: your-portfolio-link.vercel.app
+📬 Reach me at: falaknaazfatma26@gmail.com
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🛠 Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Frontend: React.js · Next.js · TypeScript · Tailwind CSS · shadcn/ui · Framer Motion
 
-## Learn More
+Backend & Database: Node.js · MongoDB · NextAuth.js
 
-To learn more about Next.js, take a look at the following resources:
+Tools & Hosting: Git · Vercel · Resend
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🚀 Featured Projects
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Spendly — A full-stack personal finance dashboard with transaction tracking, charts, and OAuth login
+Productiviti — OAuth integrations, global state management, and a shadcn/ui design system migration
+HireTalentt — UI architecture and component development for a hiring platform
 
-## Deploy on Vercel
+🤝 Let's Connect
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+LinkedIn · GitHub
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+⭐️ Maintained by Falak Naaz Fatma
